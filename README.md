@@ -22,7 +22,7 @@ The code works using a [dynamic programming](https://en.wikipedia.org/wiki/Dynam
 
 The size of the state space is:  
 x * y * z<sub>1</sub> * z<sub>2</sub> * ... * z<sub>14</sub>,  
-where z is the number of fight states (currently 23),
+where x is the number of fight states (currently 23),
 where y is the `timeRemaining` in `initial_state.csv` divided by 5,  
 and z<sub>i</sub> is the number of possible times you could end up with on fight i.  
 
