@@ -2,7 +2,7 @@
 
 ## Overview
 
-The **90 Minute Challenge Strategy Helper** is a tool designed to optimize your performance in the game by calculating the best strategies to minimize total fight times.
+The **90 Minute Challenge Strategy Helper** is a tool designed to optimize your performance in the MTPO 90 minute challenge by calculating the best strategies to minimize total fight times.
 
 ## Requirements
 
@@ -30,14 +30,14 @@ Execute the following command to run the tool:
 
 This project employs a [dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) approach, calculating solutions for the entire state space "below" your starting state. The size of the state space is determined as follows:
 
-\[ \text{Size of state space} = x \times y \times z_1 \times z_2 \times ... \times z_{14} \]
+Size of state space = x * y * z<sub>1</sub> * z<sub>2</sub> * ... * z<sub>14</sub>  
 
 Where:
 - **x** = Number of fight states (currently 23)
 - **y** = `timeRemaining` in `initial_state.csv` divided by 5
-- **zᵢ** = Number of possible times for fight i
+- **z<sub>i</sub>** = Number of possible times for fight i
 
-For instance, if your current time on Kaiser is 36.48 and the strategy configuration allows times of 36.00, 36.82, and 37.25, then \( z_2 = 2 \) (considering 36.00 and 36.48).
+For instance, if your current time on Kaiser is 36.48 and the strategy configuration allows times of 36.00, 36.82, and 37.25, then z<sub>2</sub> = 2 (considering 36.00 and 36.48).
 
 ### Memory Usage
 
@@ -52,7 +52,7 @@ This tool is most effective when you have relatively good times on each fight an
 The output presents each possible decision from your current state, along with the expected time if that decision is followed (and subsequent optimal decisions thereafter). The times may appear similar due to the nature of optimal path calculations, akin to taking detours that delay your progress.
 
 The two letters following the strategy name indicate next steps:
-- **First letter**: Action if you achieve a personal best (PB) on that fight.
+- **First letter**: Action if you achieve a PB on that fight.
 - **Second letter**: Action if you do not.
 
 Options:
@@ -72,7 +72,3 @@ Decision "macho_IL rr" - 14:36.02
 ## Planned Improvements
 
 - Enhance user interaction for real-time updates during runs (e.g., entering fight times, auto-updating state, clearer output).
-
----
-
-Feel free to modify any sections further!
